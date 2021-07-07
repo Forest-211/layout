@@ -9,10 +9,12 @@ import {
 import { RootStackNavigation, RootStackParamList } from '../Navigator';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { SafeAreaView } from 'react-native';
+import List from '../../screen/list/List';
 
 export type BottomTabParamList = {
     Home: undefined;
     Category: undefined;
+    List: undefined;
 };
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
@@ -59,6 +61,9 @@ export default class BottomTab extends Component<Props> {
             case 'Home':
                 headerTitle = '';
                 break;
+            case 'List':
+                headerTitle = '地级市';
+                break;
             case 'Category':
                 headerTitle = '分类';
                 break;
@@ -102,6 +107,9 @@ export default class BottomTab extends Component<Props> {
                                 case 'Home':
                                     icon = 'home';
                                     break;
+                                case 'List':
+                                    icon = 'graphic-eq';
+                                    break;
                                 case 'Category':
                                     icon = 'category';
                             }
@@ -115,6 +123,7 @@ export default class BottomTab extends Component<Props> {
                         },
                     })}>
                     <Tab.Screen name="Home" component={Home} />
+                    <Tab.Screen name="List" component={List} />
                     <Tab.Screen name="Category" component={Category} />
                 </Tab.Navigator>
             </SafeAreaView>

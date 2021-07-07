@@ -1,12 +1,12 @@
 export interface City {
     title: string;
-    lists: string[];
+    data: string[];
 }
 
 const city: City[] = [
     {
         title: 'A',
-        lists: [
+        data: [
             '阿坝',
             '阿拉善',
             '阿里',
@@ -20,7 +20,7 @@ const city: City[] = [
     },
     {
         title: 'B',
-        lists: [
+        data: [
             '北京',
             '白银',
             '保定',
@@ -39,7 +39,7 @@ const city: City[] = [
     },
     {
         title: 'C',
-        lists: [
+        data: [
             '重庆',
             '成都',
             '长沙',
@@ -63,7 +63,7 @@ const city: City[] = [
     },
     {
         title: 'D',
-        lists: [
+        data: [
             '大连',
             '东莞',
             '大理',
@@ -81,15 +81,15 @@ const city: City[] = [
     },
     {
         title: 'E',
-        lists: ['鄂尔多斯', '恩施', '鄂州'],
+        data: ['鄂尔多斯', '恩施', '鄂州'],
     },
     {
         title: 'F',
-        lists: ['福州', '防城港', '佛山', '抚顺', '抚州', '阜新', '阜阳'],
+        data: ['福州', '防城港', '佛山', '抚顺', '抚州', '阜新', '阜阳'],
     },
     {
         title: 'G',
-        lists: [
+        data: [
             '广州',
             '桂林',
             '贵阳',
@@ -104,7 +104,7 @@ const city: City[] = [
     },
     {
         title: 'H',
-        lists: [
+        data: [
             '杭州',
             '哈尔滨',
             '合肥',
@@ -142,7 +142,7 @@ const city: City[] = [
     },
     {
         title: 'J',
-        lists: [
+        data: [
             '济南',
             '佳木斯',
             '吉安',
@@ -167,11 +167,11 @@ const city: City[] = [
     },
     {
         title: 'K',
-        lists: ['昆明', '开封'],
+        data: ['昆明', '开封'],
     },
     {
         title: 'L',
-        lists: [
+        data: [
             '兰州',
             '拉萨',
             '来宾',
@@ -204,11 +204,11 @@ const city: City[] = [
     },
     {
         title: 'M',
-        lists: ['马鞍山', '茂名', '眉山', '梅州', '绵阳', '牡丹江'],
+        data: ['马鞍山', '茂名', '眉山', '梅州', '绵阳', '牡丹江'],
     },
     {
         title: 'N',
-        lists: [
+        data: [
             '南京',
             '南昌',
             '南宁',
@@ -225,11 +225,11 @@ const city: City[] = [
     },
     {
         title: 'P',
-        lists: ['盘锦', '攀枝花', '平顶山', '平凉', '萍乡', '莆田', '濮阳'],
+        data: ['盘锦', '攀枝花', '平顶山', '平凉', '萍乡', '莆田', '濮阳'],
     },
     {
         title: 'Q',
-        lists: [
+        data: [
             '青岛',
             '黔东南',
             '黔南',
@@ -246,11 +246,11 @@ const city: City[] = [
     },
     {
         title: 'R',
-        lists: ['日喀则', '日照'],
+        data: ['日喀则', '日照'],
     },
     {
         title: 'S',
-        lists: [
+        data: [
             '上海',
             '深圳',
             '苏州',
@@ -280,7 +280,7 @@ const city: City[] = [
     },
     {
         title: 'T',
-        lists: [
+        data: [
             '天津',
             '太原',
             '泰安',
@@ -299,7 +299,7 @@ const city: City[] = [
     },
     {
         title: 'W',
-        lists: [
+        data: [
             '武汉',
             '乌鲁木齐',
             '无锡',
@@ -316,7 +316,7 @@ const city: City[] = [
     },
     {
         title: 'X',
-        lists: [
+        data: [
             '厦门',
             '西安',
             '西宁',
@@ -342,7 +342,7 @@ const city: City[] = [
     },
     {
         title: 'Y',
-        lists: [
+        data: [
             '银川',
             '雅安',
             '延安',
@@ -369,7 +369,7 @@ const city: City[] = [
     },
     {
         title: 'Z',
-        lists: [
+        data: [
             '杂多县',
             '赞皇县',
             '枣强县',
