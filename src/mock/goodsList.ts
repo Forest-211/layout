@@ -7,7 +7,7 @@ const list = [
     {
         name: '海青蓝女装改良旗袍碎花连衣裙女夏季新款气质收腰显瘦印花旗开得胜裙子女26012 粉色 XL',
         price: '378',
-        cover: 'https://https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/185987/38/11960/292460/60deb17fE0752d6fe/13b3c38d82f4a783.jpg!q70.dpg.webp.360buyimg.com/mobilecms/s372x372_jfs/t1/136564/33/3342/136087/5efb67beEe3a982b1/c691f70db3360813.jpg!q70.dpg.webp',
+        cover: 'https://img11.360buyimg.com/n2/s370x474_jfs/t1/192219/25/11394/220302/60deb194E0e93b638/6acb6a68df34dcd7.jpg!cc_370x474!q70.jpg',
     },
     {
         name: '米家 小米电动牙刷 声波震动 进口纤密软毛 30天超长续航 IPX7防水 T100 蓝色',
