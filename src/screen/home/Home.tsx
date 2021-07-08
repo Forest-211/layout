@@ -11,6 +11,7 @@ import {
     FlatList,
     TouchableOpacity,
     Alert,
+    // StatusBar,
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -61,7 +62,7 @@ export default class Home extends Component<Props> {
             hidden: false,
             animated: true,
             backgroundColor: '#fff',
-            barStyle: 'dark-content',
+            barStyle: 'light-content',
             showHideTransition: 'fade',
         },
         tab: [
@@ -84,16 +85,85 @@ export default class Home extends Component<Props> {
         isActive: 0,
     };
 
-    componentDidMount() {}
+    componentDidMount() {
+        this.setHeader();
+    }
 
     componentDidUpdate() {}
+    setHeader() {
+        const { navigation } = this.props;
+        navigation.setOptions({
+            headerTransparent: true,
+            headerStyle: {
+                elevation: 0,
+                borderBottomWidth: 0,
+            },
+            header: () => (
+                <>
+                    <View style={[style.fdr]}>
+                        <View
+                            style={[
+                                style.fdr,
+                                style.between,
+                                style.px10,
+                                style.ml10,
+                                style.circle,
+                                styles.search,
+                            ]}>
+                            <Icon name="search1" size={18} color="red" />
+                            <Icon name="scan1" size={18} color="#999" />
+                        </View>
+                    </View>
+                    <Icon
+                        style={[style.ml10]}
+                        name="message1"
+                        size={26}
+                        color="#fff"
+                    />
+                </>
+            ),
+            headerLeft: () => (
+                // <Icon name="bars" size={48} color={y > base ? 'red' : '#fff'} />
+                <Image
+                    source={{
+                        uri: 'https://img11.360buyimg.com/jdphoto/s80x80_jfs/t27847/91/107794072/6854/14716732/5b850ecaN644d2983.png',
+                    }}
+                    style={{ width: 30, height: 30 }}
+                />
+            ),
+            headerRight: () => (
+                <>
+                    <View style={[style.fdr]}>
+                        <View
+                            style={[
+                                style.fdr,
+                                style.between,
+                                style.px10,
+                                style.ml10,
+                                style.circle,
+                                styles.search,
+                            ]}>
+                            <Icon name="search1" size={18} color="red" />
+                            <Icon name="scan1" size={18} color="#999" />
+                        </View>
+                    </View>
+                    <Icon
+                        style={[style.ml10]}
+                        name="message1"
+                        size={26}
+                        color="#fff"
+                    />
+                </>
+            ),
+        });
+    }
 
     renderItem({ item }: { item: string }) {
         return (
             <Image
                 source={{ uri: item }}
                 style={{
-                    height: 140,
+                    height: 150,
                     width: '100%',
                 }}
                 resizeMode="contain"
@@ -102,26 +172,24 @@ export default class Home extends Component<Props> {
     }
 
     handleOnScroll({ nativeEvent }: NativeSyntheticEvent<NativeScrollEvent>) {
-        console.log('nativeEvent:', nativeEvent);
+        // console.log('nativeEvent:', nativeEvent);
         const { y } = nativeEvent.contentOffset;
-        const { statusBar } = this.state;
+        // const { statusBar } = this.state;
         const { navigation } = this.props;
         const base = 30;
         navigation.setOptions({
             headerTransparent: y > base ? true : false,
             headerStyle: {
+                borderBottomWidth: 0,
+                elevation: 0,
                 paddingTop: getStatusBarHeight(),
                 backgroundColor: y > base ? '#fff' : '#6070fc',
             },
             headerTintColor: y > base ? '#fff' : '#6070fc',
-            headerLeft: () => (
-                <Icon name="bars" size={48} color={y > base ? 'red' : '#333'} />
-            ),
         });
-        statusBar.barStyle = y > base ? 'dark-content' : 'light-content';
-        statusBar.hidden = y > base ? true : false;
-        statusBar.backgroundColor = 'red';
-        this.setState({ statusBar });
+        // statusBar.barStyle = y > base ? 'dark-content' : 'light-content';
+        // statusBar.hidden = y > base ? true : false;
+        // this.setState({ statusBar });
     }
 
     handleClickTab(item: string, index: number) {
@@ -130,7 +198,7 @@ export default class Home extends Component<Props> {
     }
 
     render() {
-        const { activity, tab, isActive } = this.state;
+        const { activity, tab, isActive /*, statusBar*/ } = this.state;
         return (
             <SafeAreaView style={{ flex: 1, position: 'relative' }}>
                 {/* <StatusBar {...statusBar} translucent /> */}

@@ -52,6 +52,10 @@ const style = StyleSheet.create({
     mr10: {
         marginRight: 10,
     },
+    mx: {
+        marginLeft: 10,
+        marginRight: 10,
+    },
     m0: {
         margin: 0,
     },

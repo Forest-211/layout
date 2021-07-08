@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: '#110f64',
         alignItems: 'center',
+        borderWidth: 0,
     },
     search: {
         alignItems: 'center',

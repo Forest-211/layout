@@ -22,9 +22,9 @@ export default class List extends Component {
     render() {
         return (
             <SafeAreaView>
-                <Text style={[style.f4, style.p10, styles.fixed, styles.city]}>
+                {/* <Text style={[style.f4, style.p10, styles.fixed, styles.city]}>
                     A
-                </Text>
+                </Text> */}
                 <ScrollView
                     style={[styles.container]}
                     scrollEventThrottle={10}

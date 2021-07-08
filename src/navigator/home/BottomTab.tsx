@@ -54,6 +54,7 @@ export default class BottomTab extends Component<Props> {
     };
     getHeaderTitle() {
         const { navigation, route } = this.props;
+        console.log('route:', route);
         const { statusBar } = this.state;
         const name = getFocusedRouteNameFromRoute(route) || 'Home';
         let headerTitle = '首页';
@@ -72,7 +73,7 @@ export default class BottomTab extends Component<Props> {
             headerTitle,
             headerTransparent: name === 'Home' ? true : false,
             headerStyle: {
-                backgroundColor: name === 'Home' ? '#6070fc' : '#fff',
+                backgroundColor: name === 'Home' ? '#110f64' : '#fff',
             },
         });
         statusBar.barStyle = name === 'Home' ? 'light-content' : 'dark-content';

@@ -8,9 +8,15 @@ import {
 import React, { Component } from 'react';
 import { Platform, StyleSheet } from 'react-native';
 import BottomTab from './home/BottomTab';
+import ZhiHu from '../screen/zhihu/ZhiHu';
+import Form from '../screen/form/Form';
+import Search from '../screen/search/Search';
 
 export type RootStackParamList = {
     BottomTab: undefined;
+    ZhiHu: undefined;
+    Form: undefined;
+    Search: undefined;
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -39,8 +45,12 @@ export default class Navigator extends Component {
                                 ios: {},
                             }),
                         },
+                        headerBackTitleVisible: false,
                     }}>
                     <Stack.Screen name="BottomTab" component={BottomTab} />
+                    <Stack.Screen name="ZhiHu" component={ZhiHu} />
+                    <Stack.Screen name="Form" component={Form} />
+                    <Stack.Screen name="Search" component={Search} />
                 </Stack.Navigator>
             </NavigationContainer>
         );
